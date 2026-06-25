@@ -62,9 +62,9 @@
         <div class="ph ph-2-3 is-active"><img src="The%20Machine%20in%20the%20garden/2.%20SPIRULINA.png" alt="Spirulina cultivation systems"></div>
         <div class="ph ph-2-3"><img src="Viehmarkt%20Acting%20School/1.%20Viehmarkt%20Bank.png" alt="Viehmarkt Bank"></div>
         <div class="ph ph-2-3"><img src="Casa%20de%20dia/1.%20Main%20Casa%20de%20dia.png" alt="Casa de Día"></div>
-        <div class="ph ph-2-3" style="background:#D4CFC8;"><span>Art — coming soon</span></div>
-        <div class="ph ph-2-3" style="background:#D4CFC8;"><span>Furniture 1 — coming soon</span></div>
-        <div class="ph ph-2-3" style="background:#D4CFC8;"><span>Furniture 2 — coming soon</span></div>
+        <div class="ph ph-2-3"><img src="Art/A2/01.%20hero.png" alt="A2"></div>
+        <div class="ph ph-2-3"><img src="furniture/F1/05.%20joinery%20detail%20F1.png" alt="F1 Lounge Chair — joinery detail"></div>
+        <div class="ph ph-2-3"><img src="furniture/F2/04.arm-detail.png" alt="F2 Lounge Chair — arm detail"></div>
       </div>
       <div class="hero-dots">
         <button type="button" class="active" aria-label="Slide 1"></button>
@@ -148,5 +148,30 @@
 
   <script src="translations.js"></script>
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var overlay = document.getElementById('hero-intro');
+      if (!overlay) return;
+
+      // Force clicks to register regardless of what styles.css sets on this element
+      overlay.style.pointerEvents = 'auto';
+      overlay.style.cursor = 'pointer';
+
+      overlay.addEventListener('click', function skipIntro() {
+        overlay.removeEventListener('click', skipIntro);
+        overlay.style.pointerEvents = '';
+        overlay.style.cursor = '';
+
+        var text  = document.getElementById('hero-intro-text');
+        var nav   = document.querySelector('.nav');
+        var sideL = document.querySelector('.hero-side-left');
+        var sideR = document.querySelector('.hero-side-right');
+        var meta  = document.querySelector('.hero-meta');
+
+        // Call the same fly-out used at the natural end of the intro sequence
+        _introFly(overlay, text, nav, sideL, sideR, meta);
+      });
+    });
+  </script>
 </body>
 </html>
