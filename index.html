@@ -11,29 +11,31 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     @media (max-width: 768px) {
-      /* Put AOZ and Studio side-by-side, carousel full-width below */
-      .hero {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        padding-top: 80px;
-        gap: 16px 0;
-      }
-      .hero-side-left  { grid-column: 1; grid-row: 1; padding: 0 0 0 4px; }
-      .hero-side-right { grid-column: 2; grid-row: 1; text-align: right; padding: 0 4px 0 0; }
-      .hero-image      { grid-column: 1 / -1; grid-row: 2; }
-      .hero-meta       { grid-column: 1 / -1; grid-row: 3; }
+      /* Hide the large title text */
+      .hero-side-left,
+      .hero-side-right { display: none; }
 
-      /* Constrain carousel height and show full images without cropping */
+      /* Single-column layout: carousel + meta only */
+      .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding-top: 80px;
+        gap: 0;
+        min-height: auto;
+      }
+      .hero-image { grid-column: 1; grid-row: 1; }
+      .hero-meta  { grid-column: 1; grid-row: 2; margin-top: 32px; }
+
+      /* Full-width carousel, fixed 50vh height, cover crop */
       .hero-carousel {
         aspect-ratio: unset;
-        height: 55vh;
-        max-height: 55vh;
+        height: 50vh;
       }
       .hero-carousel .ph {
-        height: 55vh;
+        height: 50vh;
       }
       .hero-carousel .ph img {
-        object-fit: contain;
+        object-fit: cover;
       }
     }
   </style>
