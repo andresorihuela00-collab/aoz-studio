@@ -9,6 +9,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    @media (max-width: 768px) {
+      /* Put AOZ and Studio side-by-side, carousel full-width below */
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        padding-top: 80px;
+        gap: 16px 0;
+      }
+      .hero-side-left  { grid-column: 1; grid-row: 1; padding: 0 0 0 4px; }
+      .hero-side-right { grid-column: 2; grid-row: 1; text-align: right; padding: 0 4px 0 0; }
+      .hero-image      { grid-column: 1 / -1; grid-row: 2; }
+      .hero-meta       { grid-column: 1 / -1; grid-row: 3; }
+
+      /* Constrain carousel height and show full images without cropping */
+      .hero-carousel {
+        aspect-ratio: unset;
+        height: 55vh;
+        max-height: 55vh;
+      }
+      .hero-carousel .ph {
+        height: 55vh;
+      }
+      .hero-carousel .ph img {
+        object-fit: contain;
+      }
+    }
+  </style>
 </head>
 <body>
 
