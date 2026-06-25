@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residential Villa Bali — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" class="active" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <div class="wrap project-cover reveal">
+    <div class="ph ph-16-9"><span>Cover Image</span></div>
+  </div>
+
+  <section style="padding-bottom: 0;">
+    <div class="wrap">
+      <div class="project-intro-split reveal">
+        <div>
+          <h1 class="page-header project-title" data-i18n="project.villaBali.name">Residential Villa Bali</h1>
+          <p class="eyebrow" style="margin-top: 20px;">Bali, Indonesia &middot; 2026</p>
+        </div>
+        <div>
+          <p data-i18n="proj.villaBali.desc">A tropical residence organized around a sequence of open-air courtyards, designed to dissolve the boundary between interior living spaces and the surrounding jungle landscape.</p>
+          <div class="project-meta" style="margin-top: 48px;">
+            <div class="meta-map-col">
+              <div class="map-container">
+                <div id="map-main" class="map-main-el"></div>
+                <div id="map-inset" class="map-inset-el"></div>
+              </div>
+              <span class="map-location-name" data-i18n="loc.villaBali">Bali, Indonesia</span>
+            </div>
+            <div><span data-i18n="meta.year">Year</span><span>2026</span></div>
+            <div><span data-i18n="meta.program">Program</span><span data-i18n="proj.villaBali.program">Residential</span></div>
+            <div><span data-i18n="meta.status">Status</span><span data-i18n="proj.villaBali.status">Built</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-gallery reveal" style="margin-top: 80px;">
+        <div class="img-hover"><div class="ph ph-3-2"><span>Gallery 01</span></div></div>
+        <div class="col2 img-hover"><div class="ph ph-2-3"><span>Gallery 02</span></div></div>
+      </div>
+
+      <div class="project-gallery alt reveal" style="margin-top: 32px;">
+        <div class="img-hover"><div class="ph ph-2-3"><span>Gallery 03</span></div></div>
+        <div class="col2 img-hover"><div class="ph ph-3-2"><span>Gallery 04</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    var o={zoomControl:false,dragging:false,touchZoom:false,doubleClickZoom:false,scrollWheelZoom:false,boxZoom:false,keyboard:false,attributionControl:false,tap:false};
+    var m=L.map('map-main',Object.assign({},o,{center:[-8.4095,115.1889],zoom:7}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(m);
+    L.circleMarker([-8.4095,115.1889],{radius:5,fillColor:'#6B7A5E',color:'#fff',weight:1.5,fillOpacity:1}).addTo(m);
+    var i=L.map('map-inset',Object.assign({},o,{center:[0,20],zoom:1}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(i);
+    L.rectangle([[-8.5,95.0],[6.0,141.0]],{color:'#6B7A5E',weight:1.5,fill:false,dashArray:'4,4'}).addTo(i);
+  })();
+  </script>
+</body>
+</html>

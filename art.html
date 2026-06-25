@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px 40px;
+      margin-top: 80px;
+    }
+    .art-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .art-card-image {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #EDEBE6;
+    }
+    .art-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .art-card:hover .art-card-image img {
+      transform: scale(1.03);
+    }
+    .art-card-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #1C1C1C;
+      opacity: 0.45;
+      margin: 14px 0 0;
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .art-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 28px; }
+    }
+    @media (max-width: 560px) {
+      .art-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" class="active" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <section style="padding-top: 64px; padding-bottom: 120px;">
+    <div class="wrap">
+      <h1 class="page-header reveal" data-i18n="page.artTitle">Art</h1>
+
+      <div class="art-grid">
+        <a class="art-card reveal" href="art/a1.html">
+          <div class="art-card-image">
+            <img src="Art/A1/01.%20hero.png" alt="A1">
+          </div>
+          <p class="art-card-label">A1</p>
+        </a>
+        <a class="art-card reveal" href="art/a2.html">
+          <div class="art-card-image">
+            <img src="Art/A2/01.%20hero.png" alt="A2">
+          </div>
+          <p class="art-card-label">A2</p>
+        </a>
+        <a class="art-card reveal" href="art/a3.html">
+          <div class="art-card-image">
+            <img src="Art/A3/00.%20hero.png" alt="A3">
+          </div>
+          <p class="art-card-label">A3</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

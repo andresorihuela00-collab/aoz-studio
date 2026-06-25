@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa de Día — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" class="active" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Split-screen hero: info left, image right -->
+  <div class="project-split-hero reveal">
+    <div class="project-split-hero-info">
+      <p class="eyebrow" data-i18n="proj.casaDia.eyebrow">Wetland: water and memory</p>
+      <h1 class="page-header project-title" data-i18n="proj.casaDia.title">Casa de Día</h1>
+      <p style="margin-top: 32px;" data-i18n="proj.casaDia.desc">El Humedal (the wetland) is the heart of this project, functioning as a central axis around which the different spaces and functions of the day house are distributed. The purpose of this design is to integrate architecture with the environment, where buildings are designed to blend into the landscape and establish a harmonious relationship with the wetland and surrounding gardens. The use of local materials, such as stone and wood, along with sustainable construction techniques, further enhances the cultural center's integration into the natural landscape. The structures are delicately raised on wooden stilts, allowing the flow of the wetland water to spread and extend throughout the project — creating a sense of continuity where water and the environment intertwine.</p>
+      <div class="project-meta" style="margin-top: 48px;">
+        <div class="meta-map-col">
+          <div class="map-container">
+            <div id="map-main" class="map-main-el"></div>
+            <div id="map-inset" class="map-inset-el"></div>
+          </div>
+          <span class="map-location-name" data-i18n="loc.casaDia">Miacatlán, Morelos, Mexico</span>
+        </div>
+        <div><span data-i18n="meta.year">Year</span><span>2023</span></div>
+        <div><span data-i18n="meta.program">Program</span><span data-i18n="proj.casaDia.program">Community Cultural Center</span></div>
+        <div><span data-i18n="meta.status">Status</span><span data-i18n="proj.casaDia.status">Academic Proposal</span></div>
+      </div>
+      <p style="margin-top: 20px; opacity: 0.6; font-size: 14px;" data-i18n="proj.casaDia.collab">In collaboration with Luciana Fernández and Samantha Aquino</p>
+    </div>
+    <div class="project-split-hero-image">
+      <img src="Casa%20de%20dia/1.%20Main%20Casa%20de%20dia.png" alt="Casa de Día — main view">
+    </div>
+  </div>
+
+  <section style="padding-bottom: 0;">
+    <div class="wrap">
+
+      <!-- Plan & Sections -->
+      <div class="plan-sections-section reveal">
+        <p class="plan-sections-label">Plan &amp; Sections</p>
+
+        <!-- Top row: plan left (60%), program list right (40%) -->
+        <div class="plan-program-row">
+          <div class="plan-image">
+            <img src="Casa%20de%20dia/2.%20Plan.png" alt="Floor Plan">
+          </div>
+          <div class="program-list">
+            <ol>
+              <li>Entrance</li>
+              <li>Administration</li>
+              <li>Dance Hall</li>
+              <li>Multipurpose Room</li>
+              <li>Ceramics Studio</li>
+              <li>Plastic Arts Studio</li>
+              <li>Library</li>
+              <li>Community Dining Hall</li>
+              <li>Dining Terrace</li>
+              <li>Children's Playground</li>
+              <li>Wetlands</li>
+              <li>Community Garden</li>
+              <li>Indoor Multi-Sport Court</li>
+              <li>Stage</li>
+              <li>Bullfighting Arena</li>
+              <li>Restrooms</li>
+              <li>Snack Bars</li>
+              <li>Rest Area</li>
+              <li>Dressing Rooms</li>
+              <li>Bullring</li>
+              <li>Stables</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Bottom row: sections carousel at 60% width, under the plan -->
+        <div class="plan-sections-carousel-row">
+          <div class="drawings-carousel-wrap">
+            <div class="drawings-carousel">
+              <div class="drawing-slide is-active">
+                <img src="Casa%20de%20dia/3.%20Section%20A.png" alt="Section A">
+                <p class="drawing-caption">Section A</p>
+              </div>
+              <div class="drawing-slide">
+                <img src="Casa%20de%20dia/4.%20Section%20B.png" alt="Section B">
+                <p class="drawing-caption">Section B</p>
+              </div>
+              <div class="drawing-slide">
+                <img src="Casa%20de%20dia/5.%20Section%20C.png" alt="Section C">
+                <p class="drawing-caption">Section C</p>
+              </div>
+              <button type="button" class="drawing-arrow prev" aria-label="Previous section">&#8592;</button>
+              <button type="button" class="drawing-arrow next" aria-label="Next section">&#8594;</button>
+            </div>
+            <div class="drawing-dots">
+              <button type="button" class="active" aria-label="Section A"></button>
+              <button type="button" aria-label="Section B"></button>
+              <button type="button" aria-label="Section C"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom gallery: images 6 and 7 side by side -->
+      <div class="gallery-pair reveal">
+        <img src="Casa%20de%20dia/6.%20Casa%20de%20dia.png" alt="Casa de Día view 6">
+        <img src="Casa%20de%20dia/7.%20Casa%20de%20dia.png" alt="Casa de Día view 7">
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    var o={zoomControl:false,dragging:false,touchZoom:false,doubleClickZoom:false,scrollWheelZoom:false,boxZoom:false,keyboard:false,attributionControl:false,tap:false};
+    var m=L.map('map-main',Object.assign({},o,{center:[18.7547,-99.3647],zoom:9}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(m);
+    L.circleMarker([18.7547,-99.3647],{radius:5,fillColor:'#6B7A5E',color:'#fff',weight:1.5,fillOpacity:1}).addTo(m);
+    var i=L.map('map-inset',Object.assign({},o,{center:[23,-102],zoom:1}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(i);
+    L.rectangle([[14.5,-118.5],[32.7,-86.7]],{color:'#6B7A5E',weight:1.5,fill:false,dashArray:'4,4'}).addTo(i);
+  })();
+  </script>
+</body>
+</html>

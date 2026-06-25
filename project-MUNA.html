@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUNA — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" class="active" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Full-screen cover with title overlay -->
+  <div class="project-cover-overlay">
+    <img src="MUNA/1.%20MAIN%20Facade%20MIUNA.png" alt="MUNA — main facade">
+    <div class="project-cover-title">
+      <p class="eyebrow" data-i18n="proj.muna.eyebrow">Nican Axcan — Here and now</p>
+      <h1>MUNA</h1>
+    </div>
+  </div>
+
+  <section style="padding-bottom: 0;">
+    <div class="wrap">
+
+      <!-- Description -->
+      <p class="reveal" style="max-width: 680px; margin-top: 0;" data-i18n="proj.muna.desc">The museum, located in the Miguel Hidalgo borough near Coyoacán, seeks to provide its residents with an immersive experience in time. While exploring the four stages that most define the history of México, visitors will be able to understand and study the past in order to understand the present.</p>
+
+      <!-- Meta -->
+      <div class="project-meta reveal" style="margin-top: 48px;">
+        <div class="meta-map-col">
+          <div class="map-container">
+            <div id="map-main" class="map-main-el"></div>
+            <div id="map-inset" class="map-inset-el"></div>
+          </div>
+          <span class="map-location-name" data-i18n="loc.muna">Coyoacán, Mexico City, Mexico</span>
+        </div>
+        <div><span data-i18n="meta.year">Year</span><span>2022</span></div>
+        <div><span data-i18n="meta.program">Program</span><span data-i18n="proj.muna.program">Museum</span></div>
+        <div><span data-i18n="meta.status">Status</span><span data-i18n="proj.muna.status">Academic Proposal</span></div>
+      </div>
+      <p style="margin-top: 20px; opacity: 0.6; font-size: 14px;" data-i18n="proj.muna.collab">In collaboration with Mariel Ruiz and Ian Gerardo Flores</p>
+
+      <!-- Pull-quote — unique to MUNA -->
+      <blockquote class="reveal" style="margin: 72px 0 0; padding: 40px 56px; border-left: 2px solid var(--olive); font-family: var(--serif); font-size: clamp(17px, 2vw, 22px); line-height: 1.65; font-style: italic; color: var(--text); max-width: 760px;" data-i18n="proj.muna.quote">"We can't travel to the past, we can't travel to the future, so all the answers you need can be found in the Nican Axcan, in the here and now."</blockquote>
+
+      <!-- Plan & Section -->
+      <div class="plan-sections-section reveal">
+        <p class="plan-sections-label">Plan &amp; Section</p>
+
+        <!-- Plan image with program list to the right -->
+        <div class="plan-program-row" style="margin-top: 32px;">
+          <div class="plan-image">
+            <img src="MUNA/2.%20plan.png" alt="Floor plan">
+          </div>
+          <div class="program-list">
+            <ol>
+              <li>Main Entrance</li>
+              <li>Reception</li>
+              <li>Cafeteria</li>
+              <li>Shop</li>
+              <li>Restrooms</li>
+              <li>Restroom</li>
+              <li>Service Entrance</li>
+              <li>Central Courtyard</li>
+              <li>Room 1 (Pre-Hispanic Period and the Conquest)</li>
+              <li>Room 2 (Colonial Period)</li>
+              <li>Room 3 (Independence Period)</li>
+              <li>Room 4 (20th and 21st Centuries)</li>
+              <li>Collection</li>
+              <li>Reading Courtyards</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Section, then facade stacked below -->
+        <div style="margin-top: 32px;">
+          <img src="MUNA/4.%20section.png" alt="Section" style="width:100%; height:320px; object-fit:contain; background:#F7F5F1; display:block;">
+          <p class="drawing-caption">Section</p>
+        </div>
+        <div style="margin-top: 24px;">
+          <img src="MUNA/3.%20facade.png" alt="Facade" style="width:100%; height:auto; display:block;">
+          <p class="drawing-caption">Facade</p>
+        </div>
+      </div>
+
+      <!-- Two facade images side by side -->
+      <div class="gallery-pair reveal" style="margin-top: 64px;">
+        <img src="MUNA/5.%20MUNA%20FACADE.png" alt="MUNA facade" style="width:100%; height:420px; object-fit:cover; display:block;">
+        <img src="MUNA/7.%20Facade%20MIUNA.png" alt="MUNA facade detail" style="width:100%; height:420px; object-fit:cover; display:block;">
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    var o={zoomControl:false,dragging:false,touchZoom:false,doubleClickZoom:false,scrollWheelZoom:false,boxZoom:false,keyboard:false,attributionControl:false,tap:false};
+    var m=L.map('map-main',Object.assign({},o,{center:[19.3503,-99.1625],zoom:12}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(m);
+    L.circleMarker([19.3503,-99.1625],{radius:5,fillColor:'#6B7A5E',color:'#fff',weight:1.5,fillOpacity:1}).addTo(m);
+    var i=L.map('map-inset',Object.assign({},o,{center:[23,-102],zoom:1}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(i);
+    L.rectangle([[14.5,-118.5],[32.7,-86.7]],{color:'#6B7A5E',weight:1.5,fill:false,dashArray:'4,4'}).addTo(i);
+  })();
+  </script>
+</body>
+</html>

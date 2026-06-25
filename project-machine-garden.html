@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page.machineGarden.title">The Machine in the Garden — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" class="active" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <div class="wrap project-cover reveal">
+    <img src="The%20Machine%20in%20the%20garden/1.%20MAIN.png" alt="La Máquina en el Jardín — main view">
+  </div>
+
+  <section style="padding-bottom: 0;">
+    <div class="wrap">
+      <h1 class="page-header project-title reveal" data-i18n="project.machineGarden.name">La Máquina en el Jardín</h1>
+      <p class="reveal" style="margin-top: 32px;" data-i18n="proj.machineGarden.desc">A regenerative architectural thesis that reimagines Bordo Poniente, a former landfill in Mexico City, as a landscape of ecological restoration and community empowerment. Through industrial symbiosis, the project transforms waste into value: biocarbon becomes fertile soil, treated water sustains wetlands, and local flora supports a new medicinal economy. Combining research laboratories, hydroponic systems and spaces for collective healing, the project bridges infrastructure and well-being to envision a more just and resilient future.</p>
+
+      <div class="project-meta reveal">
+        <div class="meta-map-col">
+          <div class="map-container">
+            <div id="map-main" class="map-main-el"></div>
+            <div id="map-inset" class="map-inset-el"></div>
+          </div>
+          <span class="map-location-name" data-i18n="loc.machineGarden">Texcoco, State of Mexico, Mexico</span>
+        </div>
+        <div><span data-i18n="meta.year">Year</span><span>2025</span></div>
+        <div><span data-i18n="meta.program">Program</span><span data-i18n="proj.machineGarden.program">Regenerative Landscape / Thesis</span></div>
+        <div><span data-i18n="meta.status">Status</span><span data-i18n="proj.machineGarden.status">Undergraduate Thesis</span></div>
+      </div>
+      <p class="reveal" style="margin-top: 24px; opacity: 0.6; font-size: 14px;" data-i18n="proj.machineGarden.collab">In collaboration with Mariel Ruiz Islas and Mauricio Moreno Morales</p>
+
+      <div class="gallery-full reveal">
+        <img src="The%20Machine%20in%20the%20garden/2.%20SPIRULINA.png" alt="Spirulina cultivation systems">
+        <img src="The%20Machine%20in%20the%20garden/3.%20PUENTE%20La%20maquina%20en%20el%20jaridn%20mejora%20Ai.png" alt="Bridge connection across the site">
+        <img src="The%20Machine%20in%20the%20garden/4.%20Interior%20industria%20La%20maquina%20en%20el%20jardin.png" alt="Interior industrial space">
+      </div>
+
+      <div class="model-carousel-wrap compact reveal">
+        <div class="model-carousel">
+          <img class="is-active" src="The%20Machine%20in%20the%20garden/5.%20the%20machine%20in%20the%20garden.png" alt="Site diagram">
+          <img src="The%20Machine%20in%20the%20garden/6.%20the%20machine%20in%20the%20garden%2012.png" alt="Aerial view">
+          <button type="button" class="model-arrow prev" aria-label="Previous slide">&#8592;</button>
+          <button type="button" class="model-arrow next" aria-label="Next slide">&#8594;</button>
+        </div>
+        <div class="model-dots">
+          <button type="button" class="active" aria-label="Slide 1"></button>
+          <button type="button" aria-label="Slide 2"></button>
+        </div>
+      </div>
+
+      <div class="model-carousel-wrap compact reveal">
+        <div class="model-carousel">
+          <img class="is-active" src="The%20Machine%20in%20the%20garden/7.1%20model.png" alt="Model view 1">
+          <img src="The%20Machine%20in%20the%20garden/7.2.%20model.png" alt="Model view 2">
+          <img src="The%20Machine%20in%20the%20garden/7.3.%20model.png" alt="Model view 3">
+          <img src="The%20Machine%20in%20the%20garden/7.4.%20model.png" alt="Model view 4">
+          <button type="button" class="model-arrow prev" aria-label="Previous slide">&#8592;</button>
+          <button type="button" class="model-arrow next" aria-label="Next slide">&#8594;</button>
+        </div>
+        <div class="model-dots">
+          <button type="button" class="active" aria-label="Model slide 1"></button>
+          <button type="button" aria-label="Model slide 2"></button>
+          <button type="button" aria-label="Model slide 3"></button>
+          <button type="button" aria-label="Model slide 4"></button>
+        </div>
+      </div>
+
+      <div class="thesis-note reveal">
+        <p><span data-i18n="proj.machineGarden.thesisNote">This project originated as a thesis investigation.</span> <a href="documents.html" data-i18n="proj.machineGarden.viewDoc">View the academic document →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    var o={zoomControl:false,dragging:false,touchZoom:false,doubleClickZoom:false,scrollWheelZoom:false,boxZoom:false,keyboard:false,attributionControl:false,tap:false};
+    var m=L.map('map-main',Object.assign({},o,{center:[19.5171,-98.88],zoom:9}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(m);
+    L.circleMarker([19.5171,-98.88],{radius:5,fillColor:'#6B7A5E',color:'#fff',weight:1.5,fillOpacity:1}).addTo(m);
+    var i=L.map('map-inset',Object.assign({},o,{center:[23,-102],zoom:1}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(i);
+    L.rectangle([[14.5,-118.5],[32.7,-86.7]],{color:'#6B7A5E',weight:1.5,fill:false,dashArray:'4,4'}).addTo(i);
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Andrés Orihuela Zarazua — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <section style="padding-top: 64px;">
+    <div class="wrap">
+      <h1 class="page-header reveal">Andrés Orihuela Zarazua</h1>
+
+      <div class="about-grid" style="margin-top: 96px;">
+        <div class="about-text reveal">
+          <p data-i18n="about.p1">My name is Andrés. I am an architecture graduate from the National Autonomous University of Mexico (UNAM) in Mexico City, currently based in Adelaide, Australia. My academic background has been shaped by experiences in both Mexico and Germany.</p>
+          <p data-i18n="about.p2">My work explores architecture as a cultural and social practice — balancing conceptual thinking with practical implementation. I am drawn to adaptive reuse, boutique residential and interior architecture, where spatial sensitivity and material precision shape meaningful environments.</p>
+          <p data-i18n="about.p3">Through my academic work, I developed experience engaging with broader urban and community contexts, enabling me to approach projects with an understanding of architecture across multiple scales.</p>
+        </div>
+        <div class="about-portrait reveal"><img src="portrait.jpeg" alt="Andrés Orihuela"></div>
+      </div>
+
+      <div class="about-sections reveal">
+        <div>
+          <h3 data-i18n="about.education">Education</h3>
+          <p>Universidad Nacional Autónoma de México (UNAM) — B. Arch, Mexico City</p>
+          <p>Technical University of Munich (TUM) — Academic Studies, Munich</p>
+        </div>
+        <div>
+          <h3 data-i18n="about.languages">Languages</h3>
+          <p data-i18n="about.lang.spanish">Spanish — Native</p>
+          <p data-i18n="about.lang.english">English — Fluent</p>
+          <p data-i18n="about.lang.german">German — Fluent</p>
+        </div>
+        <div>
+          <h3 data-i18n="about.collaborations">Collaborations</h3>
+          <p>Mariel Ruiz Islas, Mauricio Moreno Morales, Sara Rajala, Luciana Fernández, Samantha Aquino, Kali Cobos, Jalil Castillo, Ian Gerardo Flores</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

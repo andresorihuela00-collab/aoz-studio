@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Romita — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" class="active" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Full-screen cover with title overlay — unique to La Romita -->
+  <div class="project-cover-overlay romita-hero">
+    <img src="La%20romita/1.%20Main%20La%20romita.png" alt="La Romita — main view">
+    <div class="project-cover-title">
+      <p class="eyebrow" data-i18n="proj.laRomita.eyebrow">Residential building</p>
+      <h1>La Romita</h1>
+    </div>
+  </div>
+
+  <section style="padding-bottom: 0;">
+    <div class="wrap">
+
+      <p class="reveal" style="margin-top: 0; max-width: 680px;" data-i18n="proj.laRomita.desc">La Romita was one of the first towns to be settled in New Spain, and today holds significant historical weight within Mexico City. It is located in what is now one of the most visited neighborhoods, with bustling activity both day and night: Roma Norte. Housing is in high demand in one of the largest and most important metropolises in the world. The concept arose from the intention of establishing a close relationship between the project and the existing plaza in "La Romita." The project is immersed in a space surrounded by vegetation and seating areas — a portion of the plaza was taken and incorporated into the project, creating a commercial space and redesigning the main plaza as the central part of the project.</p>
+
+      <div class="project-meta reveal" style="margin-top: 48px;">
+        <div class="meta-map-col">
+          <div class="map-container">
+            <div id="map-main" class="map-main-el"></div>
+            <div id="map-inset" class="map-inset-el"></div>
+          </div>
+          <span class="map-location-name" data-i18n="loc.laRomita">La Romita, Mexico City, Mexico</span>
+        </div>
+        <div><span data-i18n="meta.year">Year</span><span>2023</span></div>
+        <div><span data-i18n="meta.program">Program</span><span data-i18n="proj.laRomita.program">Residential</span></div>
+        <div><span data-i18n="meta.status">Status</span><span data-i18n="proj.laRomita.status">Academic Proposal</span></div>
+      </div>
+      <p style="margin-top: 20px; opacity: 0.6; font-size: 14px;" data-i18n="proj.laRomita.collab">In collaboration with Kali Cobos and Jalil Castillo</p>
+
+      <!-- Plan & Sections — three plans side by side, program grid, two sections -->
+      <div class="plan-sections-section reveal">
+        <p class="plan-sections-label">Plan &amp; Sections</p>
+
+        <!-- Three floor plans — each framed with its program list below a dividing border -->
+        <div class="romita-plans-row">
+          <div class="romita-plan-frame">
+            <img src="La%20romita/4.%20Plan%20A.png" alt="Plan A">
+            <div class="romita-plan-list">
+              <ol>
+                <li>Kitchen</li>
+                <li>Living Room</li>
+                <li>Terrace</li>
+                <li>Option for internal expansion</li>
+              </ol>
+            </div>
+          </div>
+          <div class="romita-plan-frame">
+            <img src="La%20romita/5.%20Plan%20b.png" alt="Plan B">
+            <div class="romita-plan-list">
+              <ol start="5">
+                <li>Bedroom 1</li>
+                <li>Bedroom 2</li>
+                <li>Bathroom</li>
+                <li>Terrace</li>
+              </ol>
+            </div>
+          </div>
+          <div class="romita-plan-frame">
+            <img src="La%20romita/6.%20Plan%20c.png" alt="Plan C">
+            <div class="romita-plan-list">
+              <ol start="9">
+                <li>Grill area</li>
+                <li>Rest area</li>
+                <li>Service area</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two sections side by side, object-fit: contain -->
+        <div class="romita-sections-row">
+          <div class="romita-section-item">
+            <img src="La%20romita/5.%20Section%20a.png" alt="Section A">
+            <p class="drawing-caption">Section A</p>
+          </div>
+          <div class="romita-section-item">
+            <img src="La%20romita/6.%20Section%20b.png" alt="Section B">
+            <p class="drawing-caption">Section B</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery: full-width top image, then 60/40 pair below -->
+      <div class="romita-gallery reveal">
+        <img class="romita-gallery-full" src="La%20romita/1.%20Main%20La%20romita.png" alt="La Romita — main view">
+        <div class="romita-gallery-pair">
+          <img src="La%20romita/2.%20La%20romita.png" alt="La Romita — interior">
+          <img src="La%20romita/3.%20La%20romita.png" alt="La Romita — view">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    var o={zoomControl:false,dragging:false,touchZoom:false,doubleClickZoom:false,scrollWheelZoom:false,boxZoom:false,keyboard:false,attributionControl:false,tap:false};
+    var m=L.map('map-main',Object.assign({},o,{center:[19.4154,-99.1611],zoom:12}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(m);
+    L.circleMarker([19.4154,-99.1611],{radius:5,fillColor:'#6B7A5E',color:'#fff',weight:1.5,fillOpacity:1}).addTo(m);
+    var i=L.map('map-inset',Object.assign({},o,{center:[23,-102],zoom:1}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(i);
+    L.rectangle([[14.5,-118.5],[32.7,-86.7]],{color:'#6B7A5E',weight:1.5,fill:false,dashArray:'4,4'}).addTo(i);
+  })();
+  </script>
+</body>
+</html>

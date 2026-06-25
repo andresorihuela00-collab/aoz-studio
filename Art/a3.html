@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A3 — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #F7F5F1;
+    }
+
+    .a1-hero {
+      height: 100vh;
+      overflow: hidden;
+    }
+    .a1-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .a1-info-section {
+      padding: 120px 80px;
+      display: grid;
+      grid-template-columns: 65fr 35fr;
+      gap: 72px;
+      align-items: start;
+      box-sizing: border-box;
+    }
+    .a1-front-image img {
+      width: 100%;
+      display: block;
+    }
+    .a1-info { padding-top: 8px; }
+    .a1-code {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 1;
+      color: #1C1C1C;
+      margin: 0 0 32px;
+    }
+    .a1-meta-row {
+      margin-bottom: 32px;
+      border-top: 1px solid #E0DDD7;
+    }
+    .a1-meta-item {
+      display: flex;
+      gap: 16px;
+      padding: 11px 0;
+      border-bottom: 1px solid #E0DDD7;
+    }
+    .a1-meta-key {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1C1C1C;
+      opacity: 0.38;
+      min-width: 64px;
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+    .a1-meta-val {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #1C1C1C;
+      line-height: 1.6;
+    }
+    .a1-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.85;
+      color: #1C1C1C;
+      opacity: 0.7;
+      margin: 0 0 32px;
+    }
+    .a1-keywords {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6B7A5E;
+      margin: 0 0 32px;
+      line-height: 2;
+    }
+    .a1-palette {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .a1-swatch {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Three-column triptych rows */
+    .a3-trio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+    .a3-trio img {
+      width: 100%;
+      height: 52vw;
+      max-height: 600px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Texture grid: 3 cols + full-width detail below */
+    .a1-texture-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .a1-texture-grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+    .a3-detail-full {
+      width: 100%;
+      display: block;
+      max-height: 560px;
+      object-fit: cover;
+    }
+
+    /* Signature alongside detail canvas */
+    .a3-closing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .a3-closing img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .a3-closing-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 40px;
+      box-sizing: border-box;
+      background: #F7F5F1;
+    }
+    .a3-closing-right img {
+      max-width: 280px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .a1-signature {
+      padding: 72px 24px 100px;
+      text-align: center;
+    }
+    .a1-signature-credit {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #1C1C1C;
+      opacity: 0.3;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .a1-info-section {
+        grid-template-columns: 1fr;
+        padding: 64px 24px;
+        gap: 40px;
+      }
+      .a3-trio img {
+        height: 32vw;
+        max-height: none;
+      }
+      .a3-closing {
+        grid-template-columns: 1fr;
+      }
+      .a3-closing-right { padding: 48px 24px; }
+      .a1-signature { padding: 48px 24px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="../architecture.html" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="../furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="../art.html" class="active" data-i18n="nav.art">Art</a></li>
+      <li><a href="../documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="../about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="../architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="../furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="../art.html" data-i18n="nav.art">Art</a>
+    <a href="../documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="../about.html" data-i18n="nav.about">About</a>
+    <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Section 1: Hero -->
+  <div class="a1-hero">
+    <img src="../Art/A3/00.%20hero.png" alt="A3">
+  </div>
+
+  <!-- Section 2: Front image + info -->
+  <div class="a1-info-section">
+    <div class="a1-front-image">
+      <img src="../Art/A3/02.%20front%201.png" alt="A3 — front">
+    </div>
+    <div class="a1-info">
+      <h1 class="a1-code">Three Studies</h1>
+      <div class="a1-meta-row">
+        <div class="a1-meta-item">
+          <span class="a1-meta-key">Year</span>
+          <span class="a1-meta-val">2026</span>
+        </div>
+        <div class="a1-meta-item">
+          <span class="a1-meta-key">Medium</span>
+          <span class="a1-meta-val">Acrylic on canvas (water-based)</span>
+        </div>
+        <div class="a1-meta-item">
+          <span class="a1-meta-key">Price</span>
+          <span class="a1-meta-val">500 AUD</span>
+        </div>
+      </div>
+      <p class="a1-desc">A triptych exploration of gesture, rhythm, and color. Each panel captures the same painterly movement in a different chromatic intensity—yellow, orange, and magenta with Brilliant Alizarin—creating a visual dialogue about energy, variation, and balance.</p>
+      <p class="a1-keywords">rhythm &nbsp;·&nbsp; gesture &nbsp;·&nbsp; color &nbsp;·&nbsp; triptych &nbsp;·&nbsp; movement &nbsp;·&nbsp; balance &nbsp;·&nbsp; minimalism &nbsp;·&nbsp; texture &nbsp;·&nbsp; energy &nbsp;·&nbsp; contrast</p>
+      <div class="a1-palette">
+        <div class="a1-swatch" style="background: #F5C400;"></div>
+        <div class="a1-swatch" style="background: #F07020;"></div>
+        <div class="a1-swatch" style="background: #A11C4B;"></div>
+        <div class="a1-swatch" style="background: #102847;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Front triptych -->
+  <div class="a3-trio">
+    <img src="../Art/A3/02.%20front%201.png" alt="A3 — panel 1">
+    <img src="../Art/A3/02.%20front%202.png" alt="A3 — panel 2">
+    <img src="../Art/A3/02.%20front%203.png" alt="A3 — panel 3">
+  </div>
+
+  <!-- Section 4: Side triptych -->
+  <div class="a3-trio" style="margin-top: 4px;">
+    <img src="../Art/A3/02.%20side%201.png" alt="A3 — side 1">
+    <img src="../Art/A3/02.%20side%202.png" alt="A3 — side 2">
+    <img src="../Art/A3/02.%20side%203.png" alt="A3 — side 3">
+  </div>
+
+  <!-- Section 5: Texture grid + full-width detail -->
+  <div class="a1-texture-grid" style="margin-top: 4px;">
+    <img src="../Art/A3/03.%20texture%201.png" alt="">
+    <img src="../Art/A3/03.%20texture%202.png" alt="">
+    <img src="../Art/A3/03.%20texture%203.png" alt="">
+  </div>
+  <img class="a3-detail-full" src="../Art/A3/04.%20detail%20canvas.png?v=2" alt="A3 — detail">
+
+  <!-- Section 6: Signature centered with generous space -->
+  <div style="padding: 100px 40px; text-align: center; background: #F7F5F1;">
+    <img src="../Art/A3/05.%20signature.png" alt="AOZ Studio signature" style="width: 50%; min-width: 300px; max-width: 700px; display: inline-block;">
+    <p style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: #1C1C1C; opacity: 0.3; margin: 40px 0 0;">AOZ Studio &nbsp;·&nbsp; 2026</p>
+  </div>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="../translations.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

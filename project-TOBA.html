@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOBA — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" class="active" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Split hero: image left, info right -->
+  <div class="project-split-hero reveal">
+    <div class="project-split-hero-image">
+      <img src="TOBA/1.%20main%20TOBA.PNG" alt="TOBA — main view">
+    </div>
+    <div class="project-split-hero-info">
+      <p class="eyebrow" data-i18n="proj.toba.eyebrow">House of mezcal</p>
+      <h1>TOBA</h1>
+      <p data-i18n="proj.toba.desc">TOBA is a project that engages visitors in the ancestral production of Zapotec mezcal, communicating the importance of this beverage in Oaxacan culture. The architecture captures the significance of that centuries-old cultural connection with mezcal production — the concept of toba governs the design and layout of the building. A radial structure was chosen, with the main oven in the center and a skylight of the same dimensions located just above it, making the oven the focal point.</p>
+      <div class="project-meta reveal" style="margin-top: 40px;">
+        <div class="meta-map-col">
+          <div class="map-container">
+            <div id="map-main" class="map-main-el"></div>
+            <div id="map-inset" class="map-inset-el"></div>
+          </div>
+          <span class="map-location-name" data-i18n="loc.toba">Santiago Matatlán, Oaxaca, Mexico</span>
+        </div>
+        <div><span data-i18n="meta.year">Year</span><span>2021</span></div>
+        <div><span data-i18n="meta.program">Program</span><span data-i18n="proj.toba.program">Cultural / Production</span></div>
+        <div><span data-i18n="meta.status">Status</span><span data-i18n="proj.toba.status">Academic Proposal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding-top: 0; padding-bottom: 0;">
+    <div class="wrap">
+
+      <!-- Isometric — full width, centrepiece of this project -->
+      <div class="plan-sections-section reveal">
+        <p class="plan-sections-label">Isometric</p>
+        <img src="TOBA/4.%20Isometric%20TOBA.png" alt="TOBA isometric" style="width:100%; margin-top:32px; display:block; height:560px; object-fit:contain; background:#F7F5F1;">
+      </div>
+
+      <!-- Plan & Facade -->
+      <div class="plan-sections-section reveal">
+        <p class="plan-sections-label">Plan &amp; Facade</p>
+
+        <!-- Plan image with program list to the right -->
+        <div class="plan-program-row" style="margin-top: 32px;">
+          <div class="plan-image">
+            <img src="TOBA/2.%20Plan%20and%20section.png" alt="Plan and section">
+          </div>
+          <div class="program-list">
+            <ol>
+              <li>Access</li>
+              <li>Dry Toilets</li>
+              <li>Security / Administration</li>
+              <li>Garden</li>
+              <li>Exhibition</li>
+              <li>Stables</li>
+              <li>Warehouse</li>
+              <li>Processing Area</li>
+              <li>Kitchen</li>
+              <li>Dining Room</li>
+              <li>Tasting Room</li>
+              <li>Shop</li>
+              <li>Multipurpose Room</li>
+              <li>Chemical Waste and Machinery</li>
+              <li>Loading and Unloading</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Facade below -->
+        <div style="margin-top: 32px;">
+          <img src="TOBA/3.%20Facade%20PS.png" alt="Facade" style="width:100%; height:320px; object-fit:contain; background:#F7F5F1; display:block;">
+          <p class="drawing-caption">Facade</p>
+        </div>
+      </div>
+
+      <!-- Bar and Entrance — two rendered views -->
+      <div class="gallery-pair reveal" style="margin-top: 24px; margin-bottom: 80px;">
+        <img src="TOBA/5.%20BAR%20TOBA.png" alt="TOBA bar" style="width:100%; height:460px; object-fit:cover; display:block;">
+        <img src="TOBA/6.%20ENTRANCE%20TOBA.png" alt="TOBA entrance" style="width:100%; height:460px; object-fit:cover; display:block;">
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    var o={zoomControl:false,dragging:false,touchZoom:false,doubleClickZoom:false,scrollWheelZoom:false,boxZoom:false,keyboard:false,attributionControl:false,tap:false};
+    var m=L.map('map-main',Object.assign({},o,{center:[16.2950,-96.3528],zoom:10}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(m);
+    L.circleMarker([16.2950,-96.3528],{radius:5,fillColor:'#6B7A5E',color:'#fff',weight:1.5,fillOpacity:1}).addTo(m);
+    var i=L.map('map-inset',Object.assign({},o,{center:[23,-102],zoom:1}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(i);
+    L.rectangle([[14.5,-118.5],[32.7,-86.7]],{color:'#6B7A5E',weight:1.5,fill:false,dashArray:'4,4'}).addTo(i);
+  })();
+  </script>
+</body>
+</html>

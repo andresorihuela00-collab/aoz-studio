@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viehmarkt Bank — AOZ Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AOZ Studio</a>
+    <ul class="nav-links">
+      <li><a href="architecture.html" class="active" data-i18n="nav.architecture">Architecture</a></li>
+      <li><a href="furniture.html" data-i18n="nav.furniture">Furniture</a></li>
+      <li><a href="art.html" data-i18n="nav.art">Art</a></li>
+      <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button type="button" data-lang="en">EN</button>
+      <span class="lang-divider">/</span>
+      <button type="button" data-lang="es">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+    <a href="furniture.html" data-i18n="nav.furniture">Furniture</a>
+    <a href="art.html" data-i18n="nav.art">Art</a>
+    <a href="documents.html" data-i18n="nav.documents">Documents</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <div class="project-split-hero reveal">
+    <div class="project-split-hero-image">
+      <img src="Viehmarkt%20Acting%20School/1.%20Viehmarkt%20Bank.png" alt="Viehmarkt Bank — main view">
+    </div>
+    <div class="project-split-hero-info">
+      <p class="eyebrow" data-i18n="proj.viehmarkt.eyebrow">Viehmarkt Acting School — Reactivation of the old slaughterhouse of Munich</p>
+      <h1 class="page-header project-title" data-i18n="project.viehmarkt.name">Viehmarkt Bank</h1>
+      <p style="margin-top: 32px;" data-i18n="proj.viehmarkt.desc">This project stems from a deep commitment to preserving Munich's historical legacy and fostering a vibrant cultural and educational space. The decision to repurpose Viehmarkt Bank is grounded in its rich history and its contribution to Munich's culinary essence — preserving these 19th-century buildings is essential to maintaining ties with the past. It reimagines the historic Viehmarkt Bank as an acting school, honoring its educational past while contributing to the city's cultural fabric, transforming a former slaughterhouse precinct into a vibrant hub for culture, learning and collective interaction.</p>
+      <div class="project-meta" style="margin-top: 48px;">
+        <div class="meta-map-col">
+          <div class="map-container">
+            <div id="map-main" class="map-main-el"></div>
+            <div id="map-inset" class="map-inset-el"></div>
+          </div>
+          <span class="map-location-name" data-i18n="loc.viehmarkt">Munich, Bavaria, Germany</span>
+        </div>
+        <div><span data-i18n="meta.year">Year</span><span>2024</span></div>
+        <div><span data-i18n="meta.program">Program</span><span data-i18n="proj.viehmarkt.program">Cultural / Acting School</span></div>
+        <div><span data-i18n="meta.status">Status</span><span data-i18n="proj.viehmarkt.status">Academic Proposal</span></div>
+      </div>
+      <p style="margin-top: 20px; opacity: 0.6; font-size: 14px;" data-i18n="proj.viehmarkt.collab">In collaboration with Sara Rajala</p>
+    </div>
+  </div>
+
+  <section style="padding-bottom: 0;">
+    <div class="wrap">
+      <div class="concept-section reveal">
+        <p class="concept-section-label">Concept &amp; Master Plan</p>
+        <div class="concept-grid">
+          <div class="concept-images">
+            <div class="concept-image-item">
+              <img src="Viehmarkt%20Acting%20School/9.%20The%20Connection.png" alt="The Connection">
+              <p class="concept-caption">The Connection</p>
+            </div>
+            <div class="concept-image-item">
+              <img src="Viehmarkt%20Acting%20School/10.%20The%20Symbiosis.png" alt="The Symbiosis">
+              <p class="concept-caption">The Symbiosis</p>
+            </div>
+            <div class="concept-image-item">
+              <img src="Viehmarkt%20Acting%20School/11.%20The%20Railway%20park.png" alt="Railway Park">
+              <p class="concept-caption">Railway Park</p>
+            </div>
+          </div>
+          <div class="concept-masterplan">
+            <img src="Viehmarkt%20Acting%20School/8.%20Master%20Plan.png" alt="Master Plan">
+            <div class="concept-program">
+              <ol>
+                <li>Volkstheater</li>
+                <li>Acting School</li>
+                <li>Wirthaus im Schlachthof</li>
+                <li>Film School</li>
+                <li>Cinema</li>
+                <li>Canteen / Market</li>
+                <li>Bahnwährter Thiel</li>
+                <li>Railway Park</li>
+                <li>Outdoor Cinema</li>
+                <li>Sculpture Park</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawings-carousel-wrap reveal">
+        <h3 class="drawings-label">Drawings</h3>
+        <div class="drawings-carousel">
+          <div class="drawing-slide is-active">
+            <img src="Viehmarkt%20Acting%20School/2.%20FACADE%20A.png" alt="Facade A">
+            <p class="drawing-caption">Facade A</p>
+          </div>
+          <div class="drawing-slide">
+            <img src="Viehmarkt%20Acting%20School/2.1%20SECTION%20A.png" alt="Section A">
+            <p class="drawing-caption">Section A</p>
+          </div>
+          <div class="drawing-slide">
+            <img src="Viehmarkt%20Acting%20School/3.%20FACADE%20B.png" alt="Facade B">
+            <p class="drawing-caption">Facade B</p>
+          </div>
+          <div class="drawing-slide">
+            <img src="Viehmarkt%20Acting%20School/3.1%20Section%20B.png" alt="Section B">
+            <p class="drawing-caption">Section B</p>
+          </div>
+          <div class="drawing-slide">
+            <img src="Viehmarkt%20Acting%20School/4.%20FACADE%20C.png" alt="Facade C">
+            <p class="drawing-caption">Facade C</p>
+          </div>
+          <div class="drawing-slide">
+            <img src="Viehmarkt%20Acting%20School/4.1%20SECTION%20C.png" alt="Section C">
+            <p class="drawing-caption">Section C</p>
+          </div>
+          <button type="button" class="drawing-arrow prev" aria-label="Previous drawing">&#8592;</button>
+          <button type="button" class="drawing-arrow next" aria-label="Next drawing">&#8594;</button>
+        </div>
+        <div class="drawing-dots">
+          <button type="button" class="active" aria-label="Drawing 1"></button>
+          <button type="button" aria-label="Drawing 2"></button>
+          <button type="button" aria-label="Drawing 3"></button>
+          <button type="button" aria-label="Drawing 4"></button>
+          <button type="button" aria-label="Drawing 5"></button>
+          <button type="button" aria-label="Drawing 6"></button>
+        </div>
+      </div>
+
+      <div class="gallery-extra reveal">
+        <img src="Viehmarkt%20Acting%20School/5.%20Viehmarkt%20Bank.png" alt="Viehmarkt Bank view 5">
+        <img src="Viehmarkt%20Acting%20School/6.%20Viehmarkt%20Bank.png" alt="Viehmarkt Bank view 6">
+        <img src="Viehmarkt%20Acting%20School/7.%20Viehmarkt%20Bank.png" alt="Viehmarkt Bank view 7">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>AOZ Studio</span>
+    <span>© 2025</span>
+    <span class="footer-links">
+      <a href="https://instagram.com/aoz_archt" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    var o={zoomControl:false,dragging:false,touchZoom:false,doubleClickZoom:false,scrollWheelZoom:false,boxZoom:false,keyboard:false,attributionControl:false,tap:false};
+    var m=L.map('map-main',Object.assign({},o,{center:[48.1351,11.582],zoom:8}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(m);
+    L.circleMarker([48.1351,11.582],{radius:5,fillColor:'#6B7A5E',color:'#fff',weight:1.5,fillOpacity:1}).addTo(m);
+    var i=L.map('map-inset',Object.assign({},o,{center:[50,10],zoom:1}));
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(i);
+    L.rectangle([[47.3,5.9],[55.1,15.0]],{color:'#6B7A5E',weight:1.5,fill:false,dashArray:'4,4'}).addTo(i);
+  })();
+  </script>
+</body>
+</html>
